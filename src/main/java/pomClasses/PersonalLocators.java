@@ -74,4 +74,10 @@ public class PersonalLocators extends BasePom {
         clickOnFunctionalities(saveButton);
     }
 
+    @FindBy(xpath = "(//a[contains(text(),'Sign out')])[1]")
+    private WebElement signOut;
+
+    public void clickOnSignOut(){
+        clickOnFunctionalities(signOut);
+    }
 }

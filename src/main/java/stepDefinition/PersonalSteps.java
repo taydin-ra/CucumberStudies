@@ -1,6 +1,7 @@
 package stepDefinition;
 
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 import pomClasses.BasePom;
 import pomClasses.PersonalLocators;
 
@@ -42,6 +43,11 @@ public class PersonalSteps extends BasePom {
     @Given("^Click on the Save Button$")
     public void click_on_the_Save_Button() throws Throwable {
         pl.clickSaveButton();
+
+    }
+    @When("^Click on Sign Out tab$")
+    public void click_on_Sign_Out_tab() throws Throwable {
+        pl.clickOnSignOut();
 
     }
 
