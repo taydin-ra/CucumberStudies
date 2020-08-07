@@ -22,20 +22,28 @@ public class PersonalSteps extends BasePom {
 
     }
 
-    @Given("^Clear the old last name and type the \"([^\"]*)\"$")
-    public void clear_the_old_last_name_and_type_the(String arg1) throws Throwable {
+    @Given("^Type the current \"([^\"]*)\"$")
+    public void type_the_current(String password) throws Throwable {
+        pl.typeTheCurrentPassword(password);
 
     }
 
     @Given("^Type the \"([^\"]*)\"$")
-    public void type_the(String arg1) throws Throwable {
+    public void type_the(String newPassword) throws Throwable {
+        pl.typeTheNewPassword(newPassword);
 
+    }
+    @Given("^Confirm the \"([^\"]*)\"$")
+    public void confirm_the(String confirm) throws Throwable {
+        pl.typeTheConfirmPassword(confirm);
 
     }
 
-    @Given("^Type the current \"([^\"]*)\"$")
-    public void type_the_current(String arg1) throws Throwable {
+    @Given("^Click on the Save Button$")
+    public void click_on_the_Save_Button() throws Throwable {
+        pl.clickSaveButton();
 
     }
+
 
 }

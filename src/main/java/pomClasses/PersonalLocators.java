@@ -43,4 +43,35 @@ public class PersonalLocators extends BasePom {
         firstname.clear();
         sendKeysFunction(firstname,name);
     }
+
+    @FindBy(css="input[name='old_passwd")
+    private WebElement currentPassword;
+
+    public void typeTheCurrentPassword(String password){
+        sendKeysFunction(currentPassword,password);
+
+    }
+
+
+    @FindBy(css="input#passwd")
+    private WebElement newPassword;
+
+    public void typeTheNewPassword(String newPasswordd){
+        sendKeysFunction(newPassword,newPasswordd);
+
+    }
+    @FindBy(css="input#confirmation")
+    private WebElement confirmPassword;
+
+    public void typeTheConfirmPassword(String newPassword){
+        sendKeysFunction(confirmPassword,newPassword);
+
+    }
+    @FindBy(css="button[name='submitIdentity']")
+    private WebElement saveButton;
+
+    public void clickSaveButton(){
+        clickOnFunctionalities(saveButton);
+    }
+
 }

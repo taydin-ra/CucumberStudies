@@ -6,15 +6,15 @@ Feature: Changing the personal information
     And type to "email" and "password"
     And Click on Sign In Button
 
-
   Scenario Outline: Updating the personal information2
 
-    And Click on my personal information tab
+    When Click on my personal information tab
     And Clear the old name and type the "<new name>"
-    And Clear the old last name and type the "<new last name>"
-    And Type the "<email address>"
     And Type the current "<password>"
+    And Type the "<new password>"
+    And Confirm the "<new password>"
+    And Click on the Save Button
     Examples:
-      | new name   | new last name | email address      | password   |
-      | Atlanta    | Group         | ttorun16@gmail.com | 0123456789 |
-      | Alpharetta | Group1        | ttorun16@gmail.com | 0123456789 |
+      | new name | password   | new password |
+      | Atlanta  | 0123456789 | 0123456789   |
+
