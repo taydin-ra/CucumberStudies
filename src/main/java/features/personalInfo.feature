@@ -16,7 +16,7 @@ Feature: Changing the personal information
     And Click on the Save Button
     And Click on Sign Out tab
     Examples:
-      | new name | password   | new password |
-      | Atlanta  | 0123456789 | 0123456789   |
-      | Alpharetta  | 0123456789 | 0123456789   |
+      | new name   | password   | new password |
+      | Atlanta    | 0123456789 | 0123456789   |
+      | Alpharetta | 0123456789 | 0123456789   |
 
