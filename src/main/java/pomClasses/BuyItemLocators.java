@@ -22,5 +22,14 @@ public class BuyItemLocators extends BasePom {
         clickOnFunctionalities(dressesTab);
     }
 
+    @FindBy(xpath = "//li//div//a//img[@title='Printed Chiffon Dress']")
+
+    private WebElement printedDress;
+
+    public void ClickOnPrintedDresses(){
+        ScrollDown(printedDress);
+        clickOnFunctionalities(printedDress);
+    }
+
 
 }

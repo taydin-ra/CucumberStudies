@@ -5,9 +5,9 @@ import cucumber.api.java.en.When;
 import pomClasses.BasePom;
 import pomClasses.BuyItemLocators;
 
-public class BuyItemSteps  extends BasePom {
+public class BuyItemSteps extends BasePom {
 
-    BuyItemLocators buyItemLocator=new BuyItemLocators();
+    BuyItemLocators buyItemLocator = new BuyItemLocators();
 
     @When("^I click on Dresses$")
     public void i_click_on_Dresses() throws Throwable {
@@ -17,6 +17,9 @@ public class BuyItemSteps  extends BasePom {
 
     @When("^Click on any dress$")
     public void click_on_any_dress() throws Throwable {
+        Thread.sleep(3000);
+
+        buyItemLocator.ClickOnPrintedDresses();
 
     }
 

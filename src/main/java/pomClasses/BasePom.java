@@ -4,6 +4,7 @@ package pomClasses;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -15,6 +16,9 @@ public class BasePom {
     public WebDriver driver; // BaseClass  , AbstractClass
     WebDriverWait wait;
 
+    public BasePom() {
+        PageFactory.initElements(BaseDriver.getDriver(), this);
+    }
 
     public void waitMethod() {
 
@@ -64,5 +68,11 @@ public class BasePom {
 
         Assert.assertTrue(URL.contains(expectedResult));
 
+    }
+
+    public void ScrollDown(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        js.executeScript("arguments[0].scrollIntoView();", element);
     }
 }
