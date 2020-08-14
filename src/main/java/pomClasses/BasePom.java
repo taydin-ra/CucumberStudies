@@ -35,7 +35,7 @@ public class BasePom {
             wait.until(ExpectedConditions.elementToBeClickable(clickElement));
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+           // System.out.println(e.getMessage());
         }
 
 
